@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: white;
+            --secondary-color: black;
+            --font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        
+        #wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #main {
+            height: 400px;
+            width: 400px;
+            border: 2px solid orangered;
+            background-image: url("https://cdn5.vectorstock.com/i/1000x1000/91/94/white-empty-studio-background-vector-9539194.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Hide the checkbox */
+        #toggle {
+            display: none;
+        }
+
+        /* Style the label to make it look like a button or control */
+        label {
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: var(--font-size);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Change the background color when the checkbox is checked */
+        #toggle:checked ~ #wrapper {
+            background-color: var(--secondary-color);
+        }
+        h5:hover::after{
+         content: "   <use the chechbox type of input> ";
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrapper">
+        <div id="main">
+            <h2>Theme</h2>
+            <h5>Reveal Clue</h5>
+            <label for="toggle">Toggle Background</label>
+        </div>
+    </div>
+</body>
+</html>
